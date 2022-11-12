@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <script type="text/javascript">
+      $(document).ready(function () {
+        AOS.init();
+
+        $('#slide-toggle').click(function () {
+          $('.overlay').fadeToggle(50);
+
+          $('#menu-slider').toggleClass('hide');
+          $('#main-warapper').toggleClass('left');
+
+          $('body').toggleClass('no-scroll');
+        });
+
+        $('.overlay').click(function () {
+          $(this).fadeToggle(50);
+
+          $('#menu-slider').toggleClass('hide');
+          $('#main-warapper').toggleClass('left');
+
+          $('body').toggleClass('no-scroll');
+        });
+      });
+    </script>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+		.c-pointer {
+		  cursor: pointer;
+		}
+
+		.no-scroll {
+		  overflow: hidden;
+		  background-color: #2f3e4e;
+		}
+
+		.fz-2 {
+		  font-size: 2em;
+		}
+
+		.fz-4 {
+		  font-size: 4em;
+		}
+
+		.fz-5 {
+		  font-size: 5em;
+		}
+
+		.h-100 {
+		  height: 100vh !important;
+		}
+
+		.lobster {
+		  font-family: lobster, cursive;
+		}
+
+		.raleway {
+		  font-family: 'Raleway', sans-serif;
+		}
+
+		.ls-5 {
+		  letter-spacing: 5px;
+		}
+
+		.ls-4 {
+		  letter-spacing: 4px;
+		}
+
+		a:hover {
+		  text-decoration: none;
+		}
+
+		body {
+		  overflow-x: hidden;
+		}
+
+		#slide-toggle {
+		  z-index: 99999;
+		  position: relative;
+		  color: #fff;
+		  border: 2px solid #666;
+		  padding: 5px 10px;
+		  top: 20px;
+		}
+
+		#menu-slider.hide {
+		  left: -100%;
+		}
+
+		#menu-slider {
+		  height: 100%;
+		  background-color: #2f3e4e;
+		  overflow-y: auto;
+		  overflow-y: hidden;
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  transition: all 0.4s;
+		  z-index: 9999;
+		}
+
+		#menu-slider ul {
+		  margin: 0;
+		  padding: 0;
+		  margin-top: 80px;
+		}
+
+		#menu-slider ul li {
+		  list-style-type: none;
+		}
+
+		#menu-slider ul li a {
+		  display: inline-block;
+		  width: 100%;
+		  padding: 10px;
+		  color: #fff;
+		  font-size: 1.5em;
+		  text-transform: uppercase;
+		}
+
+		#menu-slider ul li a:hover {
+		  color: #d74703;
+		}
+
+		.overlay {
+		  height: 100%;
+		  background-color: rgba(0, 0, 0, 0.3);
+		  position: fixed;
+		  top: 0;
+		  right: 0;
+		  display: none;
+		  z-index: 99;
+		}
+
+		#main-warapper.left {
+		  left: 20%;
+		  background-color: #2f3e4e;
+		}
+
+		#main-warapper {
+		  position: absolute;
+		  left: 0;
+		  transition: all 0.4s;
+		  width: 100%;
+		  top: 0;
+		}
+
+		#image-header {
+		  background-image: url('https://img.youm7.com/ArticleImgs/2018/2/2/98294-%D8%A3%D9%88%D9%81%D9%8A%D8%B3-2019.jpg');
+		  background-position: center;
+		  background-size: cover;
+		  position: absolute;
+		  top: 0;
+		  padding: 0;
+		  margin: 0;
+		  height: 100vh;
+		}
+
+		#image-header .layer {
+		  background-color: rgba(0, 0, 0, 0.4);
+		  position: absolute;
+		  top: 0;
+		  height: 100%;
+		  width: 100%;
+		}
+
+		#logo {
+		  font-size: 6em;
+		}
+
+		#contact-us {
+		  background-image: url('http://kapishsolutions.com/wp-content/uploads/2013/10/contact-us-banner.jpg');
+		  -webkit-background-size: cover;
+		  background-size: cover;
+		  background-position: center;
+		  height: 230px;
+		  position: relative;
+		}
+
+		#contact-us .layer {
+		  background-color: rgba(0, 0, 0, 0.6);
+		  position: absolute;
+		  top: 0;
+		  height: 100%;
+		  width: 100%;
+		}
+
+		#contact-us p,
+		#contact-us h2,
+		#contact-us button {
+		  z-index: 1;
+		}
+
+		footer {
+		  background-color: #272727;
+		}
+
+		footer #copyright {
+		  background-color: #1a0fb3;
+		}
+
+		footer i {
+		  font-size: 22px;
+		}
+	</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=" />
+    <title></title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 pl-4">
+          <i id="slide-toggle" class="ion-navicon-round fz-2 c-pointer"></i>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3 col-sm-4 hide" id="menu-slider">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Our team</a></li>
+          </ul>
+        </div>
+        <div class="col-md-9 col-sm-8 overlay c-pointer"></div>
+      </div>
+    </div>
+
+    <div id="main-warapper">
+      <div class="container-fluid bg-light">
+        <div class="row">
+          <div class="container-fluid">
+            <div class="row justify-content-center align-items-center h-100">
+              <div class="col-md-12" id="image-header">
+                <div class="layer"></div>
+              </div>
+              <div class="col-md-12">
+                <div class="text-center">
+                  <h1
+                    data-aos="zoom-in"
+                    data-aos-duration="600"
+                    class="text-white text-uppercase lobster"
+                    id="logo"
+                  >
+                    .S!mple
+                  </h1>
+
+                  <h3
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    class="text-white text-uppercase mb-4 ls-5"
+                  >
+                    Are you a new member?
+                  </h3>
+
+                  <button
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    class="btn btn-danger text-uppercase"
+                  >
+                    Register
+                  </button>
+                  <button
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    class="btn btn-outline-light text-uppercase"
+                  >
+                    Login
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container text-secondary raleway">
+            <div
+              class="row pt-5 mt-5"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+            >
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2">
+                    <i class="ion-ios-clock-outline fz-4"></i>
+                  </div>
+                  <div class="col-md-10">
+                    <h5 class="text-primary">On Time Service.</h5>
+                    <p>
+                      Transforming distribution and marketing with key
+                      capabilities in customer insight and analytics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2">
+                    <i class="ion-ios-person-outline fz-4"></i>
+                  </div>
+                  <div class="col-md-10">
+                    <h5 class="text-primary">A Team Of Professionals.</h5>
+                    <p>
+                      Transforming distribution and marketing with key
+                      capabilities in customer insight and analytics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2">
+                    <i class="ion-ios-pulse fz-4"></i>
+                  </div>
+                  <div class="col-md-10">
+                    <h5 class="text-primary">Analyze Your Business.</h5>
+                    <p>
+                      Transforming distribution and marketing with key
+                      capabilities in customer insight and analytics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="row pt-5 pb-5 mb-5"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2">
+                    <i class="ion-ios-people-outline fz-4"></i>
+                  </div>
+                  <div class="col-md-10">
+                    <h5 class="text-primary">Strong Connection.</h5>
+                    <p>
+                      Transforming distribution and marketing with key
+                      capabilities in customer insight and analytics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2">
+                    <i class="ion-ios-ionic-outline fz-4"></i>
+                  </div>
+                  <div class="col-md-10">
+                    <h5 class="text-primary">Advanced Technology.</h5>
+                    <p>
+                      Transforming distribution and marketing with key
+                      capabilities in customer insight and analytics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2">
+                    <i class="ion-ios-gear-outline fz-4"></i>
+                  </div>
+                  <div class="col-md-10">
+                    <h5 class="text-primary">National Bank Authorized.</h5>
+                    <p>
+                      Transforming distribution and marketing with key
+                      capabilities in customer insight and analytics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" data-aos="fade-up" data-aos-duration="600">
+        <div class="row row-eq-height align-items-center">
+          <div class="col-md-6 p-5 raleway">
+            <h2 class="text-uppercase">Read The Story Behind</h2>
+            <h2 class="text-uppercase">Our Success</h2>
+          </div>
+          <div class="col-md-6 text-secondary p-5 raleway">
+            <p>
+              <span class="text-primary"
+                >We provide buy-side, sell-side and market infrastructure
+                firms</span
+              >
+              <span
+                >with a full-service offering, including systems integration and
+                technology consulting services, to assist in delivering high
+                performance trading and settlement.</span
+              >
+            </p>
+
+            <p>
+              More than 25 years of experience working in the industry has
+              enabled us to build our services and solutions in strategy,
+              consulting, digital, technology and operations that help our
+              clients with their trading projects around the world. Capabilities
+              we leverage.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid bg-light">
+        <div class="container">
+          <div class="row pb-5">
+            <h2
+              data-aos="zoom-in"
+              data-aos-duration="600"
+              class="mb-0 mt-5 w-100 text-center text-uppercase raleway"
+            >
+              Our Team
+            </h2>
+            <small
+              data-aos="zoom-in"
+              data-aos-duration="600"
+              class="
+                w-100
+                ls-4
+                text-secondary
+                raleway
+                text-center text-uppercase
+                pb-5
+              "
+              >professional team</small
+            >
+            <div
+              class="col-md-4 col-sm-12 col-xs-12"
+              data-aos="fade-in"
+              data-aos-duration="1200"
+            >
+              <div class="form-group">
+                <img
+                  class="img-fluid"
+                  src="https://img.bekia.es/articulos/th/20000/20540-c.jpg"
+                  alt="Person1"
+                />
+                <div class="p-4 bg-white">
+                  <h5 class="m-0">Jeanette Kingston</h5>
+                  <small class="raleway text-uppercase text-secondary"
+                    >Vice President</small
+                  >
+
+                  <p class="m-0 mt-3">+1-334-3452-345</p>
+                  <a href="#">Johnsm@financitytheme.com</a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-4 col-sm-12 col-xs-12"
+              data-aos="fade-in"
+              data-aos-duration="1200"
+            >
+              <div class="form-group">
+                <img
+                  class="img-fluid"
+                  src="http://www.addnodegroup.com/Global/Illustrationer%202015/2015/JonasGejer.jpg"
+                  alt="Person2"
+                />
+                <div class="p-4 bg-white">
+                  <h5 class="m-0">John Smithy</h5>
+                  <small class="raleway text-uppercase text-secondary"
+                    >Chief Financial Officer</small
+                  >
+
+                  <p class="m-0 mt-3">+1-334-3452-345</p>
+                  <a href="#">Johnsm@financitytheme.com</a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-4 col-sm-12 col-xs-12"
+              data-aos="fade-in"
+              data-aos-duration="1200"
+            >
+              <div class="form-group">
+                <img
+                  class="img-fluid"
+                  src="https://crownalliancecapital.com/wp-content/uploads/2016/05/personnel-4-600x465.jpg"
+                  alt="Person3"
+                />
+                <div class="p-4 bg-white">
+                  <h5 class="m-0">Linda Kloe</h5>
+                  <small class="raleway text-uppercase text-secondary"
+                    >Senior Engineer</small
+                  >
+
+                  <p class="m-0 mt-3">+1-334-3452-345</p>
+                  <a href="#">Johnsm@financitytheme.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="contact-us">
+        <div class="row justify-content-center align-items-center flex-column">
+          <h2
+            data-aos="zoom-in"
+            data-aos-duration="600"
+            class="pt-5 text-white raleway"
+          >
+            Wanna Talk To Us?
+          </h2>
+          <p data-aos="zoom-in" data-aos-duration="1000" class="text-white">
+            Please feel free to contact us. We’re super happy to talk to you.
+            Feel free to ask anything.
+          </p>
+
+          <button
+            data-aos="zoom-in"
+            data-aos-duration="1400"
+            class="btn btn-danger text-uppercase"
+          >
+            Contact us
+          </button>
+          <div class="layer"></div>
+        </div>
+      </div>
+
+      <footer>
+        <h2
+          data-aos="fade-up"
+          data-aos-duration="600"
+          class="pt-5 text-white text-center text-uppercase lobster fz-5 pb-5"
+        >
+          .S!MPLE
+        </h2>
+
+        <div class="container-fluid p-4 text-white" id="copyright">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="float-left">
+                Copyright 2018, All Right Reserved, .S!IMPLE
+              </div>
+              <div class="float-right">
+                <i class="ion-social-facebook p-2"></i>
+                <i class="ion-social-googleplus p-2"></i>
+                <i class="ion-social-twitter p-2"></i>
+                <i class="ion-social-github p-2"></i>
+                <i class="ion-social-instagram p-2"></i>
+                <i class="ion-social-youtube p-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
